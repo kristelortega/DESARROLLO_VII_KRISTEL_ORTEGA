@@ -1,0 +1,11 @@
+[
+    {"titulo": "El Principe Cruel", "autor": "Holly Black", "anio": 2018, "precio": 16.99, "cantidad": 12},
+    {"titulo": "Corte de Rosas y Espinas", "autor": "Sarah J. Maas", "anio": 2015, "precio": 18.50, "cantidad": 13},
+    {"titulo": "Trono de Cristal", "autor": "Sarah J. Maas", "anio": 2012, "precio": 15.99, "cantidad": 14},
+    {"titulo": "Almendra", "autor": "Rosa Montero", "anio": 2018, "precio": 13.99, "cantidad": 11},
+    {"titulo": "El Principito", "autor": "Antoine de Saint-Exupéry", "anio": 1943, "precio": 10.99, "cantidad": 12},
+    {"titulo": "Alas de Sangre", "autor": "Jordi Sierra i Fabra", "anio": 2015, "precio": 14.99, "cantidad": 13},
+    {"titulo": "De Sangre y Cenizas", "autor": "Jennifer L. Armentrout", "anio": 2021, "precio": 19.99, "cantidad": 14},
+    {"titulo": "Seis de Cuervos", "autor": "Leigh Bardugo", "anio": 2015, "precio": 17.50, "cantidad": 12}
+  ]
+  
