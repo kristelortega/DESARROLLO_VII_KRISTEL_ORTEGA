@@ -1,3 +1,4 @@
+
 <?php
 require_once 'Prestable.php';
 
@@ -41,6 +42,7 @@ class Libro {
         return "'{$this->getTitulo()}' por {$this->getAutor()}, publicado en {$this->getAnioPublicacion()}";
     }
 
+    // Métodos de la interfaz Prestable
     public function prestar() {
         if ($this->disponible) {
             $this->disponible = false;
@@ -58,6 +60,7 @@ class Libro {
     }
 }
 
+
 // Ejemplo de uso
 $libro = new Libro("Rayuela", "Julio Cortázar", 1963);
 echo $libro->obtenerInformacion() . "\n";
@@ -66,3 +69,4 @@ $libro->prestar();
 echo "Disponible después de prestar: " . ($libro->estaDisponible() ? "Sí" : "No") . "\n";
 $libro->devolver();
 echo "Disponible después de devolver: " . ($libro->estaDisponible() ? "Sí" : "No") . "\n";
+
