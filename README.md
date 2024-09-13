@@ -1,1 +1,1 @@
-Repositorio del curso DS6
+Repositorio del curso DS7
