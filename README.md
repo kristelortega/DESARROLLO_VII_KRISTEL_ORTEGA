@@ -1,1 +1,1 @@
-Talleres de Desarrollo VII (A partir del Taller 3 en adelante)
+Repositorio del curso DS6
