@@ -1,31 +1,35 @@
 <?php
 function sanitizarNombre($nombre) {
-    return filter_var(trim($nombre), FILTER_SANITIZE_STRING);
+    return htmlspecialchars(trim($nombre), ENT_QUOTES, 'UTF-8');
 }
 
 function sanitizarEmail($email) {
-    return filter_var(trim($email), FILTER_SANITIZE_EMAIL);
+    return htmlspecialchars(trim($email), ENT_QUOTES, 'UTF-8');
 }
 
 function sanitizarEdad($edad) {
-    return filter_var($edad, FILTER_SANITIZE_NUMBER_INT);
+    return intval($edad); // Para edad, puedes convertir a entero directamente
 }
 
 function sanitizarSitioWeb($sitioWeb) {
-    return filter_var(trim($sitioWeb), FILTER_SANITIZE_URL);
+    return htmlspecialchars(trim($sitioWeb), ENT_QUOTES, 'UTF-8');
 }
 
 function sanitizarGenero($genero) {
-    return filter_var(trim($genero), FILTER_SANITIZE_STRING);
+    return htmlspecialchars(trim($genero), ENT_QUOTES, 'UTF-8');
 }
 
 function sanitizarIntereses($intereses) {
-    return array_map(function($interes) {
-        return filter_var(trim($interes), FILTER_SANITIZE_STRING);
-    }, $intereses);
+    return array_map('htmlspecialchars', $intereses); // Sanitiza cada interés
 }
 
 function sanitizarComentarios($comentarios) {
     return htmlspecialchars(trim($comentarios), ENT_QUOTES, 'UTF-8');
 }
+
+function sanitizarFechaNacimiento($fechaNacimiento) {
+    return htmlspecialchars(trim($fechaNacimiento), ENT_QUOTES, 'UTF-8');
+}
+
+// Puedes agregar más funciones de sanitización si es necesario.
 ?>

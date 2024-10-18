@@ -1,0 +1,38 @@
+[
+    {
+        "nombre": "JeanPaul",
+        "email": "jean.paul@utp.ac.pa",
+        "sitio_web": "https:\/\/github.com\/kristelortega\/DESARROLLO_VII_KRISTEL_ORTEGA\/tree\/main\/TALLERES\/TALLER_6",
+        "genero": "masculino",
+        "comentarios": "Prueba",
+        "fecha_nacimiento": "2015-05-24",
+        "edad": 9,
+        "foto_perfil": "uploads\/6711bc307ccb8_Captura de pantalla 2024-10-08 001756.png"
+    },
+    {
+        "nombre": "JeanPaul",
+        "email": "jean.paul@utp.ac.pa",
+        "sitio_web": "https:\/\/github.com\/kristelortega\/DESARROLLO_VII_KRISTEL_ORTEGA\/tree\/main\/TALLERES\/TALLER_6",
+        "genero": "masculino",
+        "intereses": [
+            "deportes"
+        ],
+        "comentarios": "Prueba",
+        "fecha_nacimiento": "2024-10-01",
+        "edad": 0,
+        "foto_perfil": "uploads\/6711bcb86b4ba_Captura de pantalla 2024-10-08 000545.png"
+    },
+    {
+        "nombre": "Kristel Ortega",
+        "email": "kristel.ortega@utp.ac.pa",
+        "sitio_web": "https:\/\/github.com\/kristelortega\/DESARROLLO_VII_KRISTEL_ORTEGA\/tree\/main\/TALLERES\/TALLER_6",
+        "genero": "femenino",
+        "intereses": [
+            "lectura"
+        ],
+        "comentarios": "PRIMER REGISTRO",
+        "fecha_nacimiento": "2004-05-23",
+        "edad": 20,
+        "foto_perfil": "uploads\/6711bf7e0b962_Captura de pantalla 2024-10-08 000545.png"
+    }
+]
