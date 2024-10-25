@@ -3,8 +3,8 @@ session_start();
 
 // Lista de usuarios predefinida
 $usuarios = [
-    "usuario1" => "1234",
-    "usuario2" => "abcd"
+    "kristel.ortega" => "desarrollo7",
+    "Profesor" => "contraseña"
 ];
 
 // Validar el formulario
