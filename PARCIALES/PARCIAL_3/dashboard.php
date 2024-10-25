@@ -33,7 +33,7 @@ $tareas = $_SESSION['tareas'] ?? [];
         ?>
     </ul>
 
-    <a href="add_task.php">Agregar Tarea</a>
+    <a href="agregar_tarea.php">Agregar Tarea</a>
     <br><br>
     <a href="logout.php">Cerrar Sesión</a>
 </body>
