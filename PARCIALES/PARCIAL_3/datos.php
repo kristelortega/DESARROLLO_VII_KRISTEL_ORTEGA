@@ -5,10 +5,11 @@ $users = [
     "Estudiante" => ["rol" => "Estudiante", "password" => "abcde"],
 ];
 
+
 // Calificaciones predefinidas
 $grades = [
-    ["estudiante" => "Estudiante 1", "calificacion" => 85],
-    ["estudiante" => "Estudiante 2", "calificacion" => 92],
-    ["estudiante" => "Estudiante 3", "calificacion" => 78],
+    ["estudiante" => "Daniel", "calificacion" => 85],
+    ["estudiante" => "Miguel", "calificacion" => 92],
+    ["estudiante" => "Carlos", "calificacion" => 78],
 ];
 ?>
