@@ -1,0 +1,136 @@
+/* Ajustes generales para mejorar la consistencia */
+.recipe-header {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.recipe-header h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+}
+
+.recipe-details {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+.recipe-image {
+    max-width: min(100%, 600px);
+    height: auto;
+    margin: 1rem auto;
+}
+
+/* Sección de ingredientes más compacta en móvil */
+.ingredients-section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.ingredients-section h2 {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    margin-bottom: 1rem;
+}
+
+.ingredients-section li {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    margin-bottom: 0.75rem;
+}
+
+/* Mejoras para la sección de comentarios */
+.comments-section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.comentario {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.comment-form textarea {
+    padding: 0.75rem;
+    min-height: 80px;
+}
+
+/* Ajustes para recetas relacionadas */
+.recipes-scroll {
+    margin: 1rem -1rem;
+    padding: 0 1rem;
+}
+
+.recipes-container {
+    gap: 1rem;
+}
+
+.receta-externa {
+    flex: 0 0 280px;
+    padding: 0.75rem;
+}
+
+.receta-externa img {
+    height: 180px;
+}
+
+/* Media queries específicas */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    .recipe-header {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .logo-container {
+        gap: 0.75rem;
+    }
+
+    .site-title {
+        font-size: 1.5rem;
+    }
+
+    .google-signin-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #searchForm {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    #searchInput {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .recipe-header {
+        padding: 1rem;
+    }
+
+    .recipe-image-container {
+        margin: 1rem -1rem;
+    }
+
+    .recipe-image {
+        border-radius: 15px;
+        scale: 90%;
+    }
+
+    .ingredients-section,
+    .comments-section {
+        padding: 1rem;
+        border-radius: var(--radius);
+    }
+
+    .receta-externa {
+        flex: 0 0 240px;
+    }
+
+    .receta-externa img {
+        height: 160px;
+    }
+}
+

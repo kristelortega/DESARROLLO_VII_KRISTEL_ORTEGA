@@ -1,0 +1,358 @@
+:root {
+    --primary-color: #827167;  /* Warm brown from logo */
+    --secondary-color: #e4e1d8; /* Light beige from logo */
+    --background-color: #f8f7f3; /* Lighter warm beige */
+    --container-bg: #ffffff;
+    --text-dark: #4a4543;      /* Darker warm gray */
+    --text-light: #827167;     /* Matching primary */
+    --shadow: 0 4px 6px rgba(130, 113, 103, 0.1);
+    --radius: 24px;            /* Rounder corners to match logo style */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--container-bg);
+    box-shadow: var(--shadow);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye espacio entre los elementos */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem; /* Espacio horizontal para evitar bordes pegados */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+header img {
+    height: 80px;
+    width: auto;
+}
+
+.site-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.google-signin-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.8rem 1.5rem;
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #dadce0;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-left: auto; /* Empuja el botón hacia el borde derecho */
+}
+
+.google-signin-button:hover {
+    background-color: #f8f8f8;
+    border-color: #c6c6c6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.google-signin-button svg {
+    height: 24px;
+    width: 24px;
+}
+
+/* Updated Search Form */
+#searchForm {
+    background: var(--container-bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin: 2rem auto;
+    max-width: 800px;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(130, 113, 103, 0.1);
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    height: 100%;
+    min-width: 120px;
+}
+
+button[type="submit"]:hover {
+    background-color: #6f5f56;
+    transform: translateY(-2px);
+}
+/* Estilos para la caja de resultados de búsqueda en vivo */
+#liveSearchResults {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000; /* Asegura que esté encima */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ajusta al ancho del contenedor */
+}
+
+#liveSearchResults div {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+#liveSearchResults div:hover {
+    background-color: #f9f9f9; /* Resalta el elemento activo */
+}
+
+#liveSearchResults img {
+    vertical-align: middle; /* Centra la imagen con el texto */
+    border-radius: 4px; /* Opcional para redondear las esquinas */
+}
+#liveSearchResults div {
+    transition: background-color 0.2s ease;
+}
+
+
+/* Recipe Sections */
+.seccion-recetas {
+    background: var(--container-bg);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow);
+}
+
+.seccion-recetas h3 {
+    color: var(--text-dark);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+/* Recipe Grid and Cards */
+.grid-recetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.receta {
+    background: var(--container-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.receta:hover {
+    transform: translateY(-5px);
+}
+
+.receta-imagen {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.receta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.receta:hover img {
+    transform: scale(1.05);
+}
+
+.receta-contenido {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.receta h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.receta p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.receta a {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+.btn-crear-receta button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-crear-receta button:hover {
+    background-color: #45a049; /* Verde oscuro */
+}
+
+
+.receta a:hover {
+    background-color: #6f5f56;
+    transform: translateY(-2px);
+}
+footer {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-links a {
+    color: #4285F4;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #34A853;
+}
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-paginacion {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #dadce0;
+    border-radius: var(--radius);
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-paginacion:hover {
+    background-color: #f8f8f8;
+    border-color: #c6c6c6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header img {
+        height: 60px; /* Slightly smaller on mobile */
+    }
+
+    .site-title {
+        font-size: 1.6rem;
+    }
+
+    #searchForm {
+        flex-direction: column;
+        padding: 1.5rem;
+        width: 100%;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}
+
